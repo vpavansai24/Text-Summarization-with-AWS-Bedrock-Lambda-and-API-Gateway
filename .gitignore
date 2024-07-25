@@ -11,3 +11,6 @@
 *.tfvars.json
 
 *.terraform.*
+
+# .zip files
+*.zip

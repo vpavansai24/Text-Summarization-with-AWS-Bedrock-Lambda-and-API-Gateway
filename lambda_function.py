@@ -7,8 +7,8 @@ def lambda_handler(event, context):
 
     print("Event:", event)
 
-    prompt = event['prompt']
-    # prompt = event['queryStringParameters']['prompt']
+    # prompt = event['prompt']
+    prompt = event['queryStringParameters']['prompt']
     print("Prompt:", prompt)
    
     # Create  Request Syntax - Get details from console & body should be json object - use json.dumps for body

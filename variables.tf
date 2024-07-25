@@ -4,10 +4,10 @@ variable "myregion" {
   default = "us-east-1"
 }
 
-variable "accountId" {
-  description = "The AWS Account ID"
-  type = string
-}
+# variable "accountId" {
+#   description = "The AWS Account ID"
+#   type = string
+# }
 
 variable "lambda_function_name" {
   description = "The Name of the AWS Lambda Function"
@@ -18,5 +18,5 @@ variable "lambda_function_name" {
 variable "endpoint_path" {
   description = "The Get Endpoint Path"
   type = string
-  default = "reports"
+  default = "summarize"
 }
