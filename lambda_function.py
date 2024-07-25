@@ -5,8 +5,11 @@ bedrock_client = boto3.client('bedrock-runtime')
 
 def lambda_handler(event, context):
 
-    prompt = event['queryStringParameters']['prompt']
-    print(prompt)
+    print("Event:", event)
+
+    prompt = event['prompt']
+    # prompt = event['queryStringParameters']['prompt']
+    print("Prompt:", prompt)
    
     # Create  Request Syntax - Get details from console & body should be json object - use json.dumps for body
     bedrock_response = bedrock_client.invoke_model(
@@ -26,7 +29,7 @@ def lambda_handler(event, context):
 
     # Update the 'return' by changing the 'body'
     client_final_response = bedrock_response_string['generations'][0]['text']
-    print(client_final_response)
+    print("Response:", client_final_response)
 
     return {
         'statusCode': 200,
