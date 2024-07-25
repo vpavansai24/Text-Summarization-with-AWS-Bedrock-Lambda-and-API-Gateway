@@ -125,7 +125,7 @@ You can test the API endpoint using tools like `curl` or `Postman`.
 
 ### Example Request with `curl`
 
-In this example, the text prompt is sent as a query parameter named `prompt`. 
+To test your API endpoint using `curl`, you need to send a POST request with the text prompt included in the request body as JSON. Here’s how you can do it:
 
 ```bash
 curl -X POST https://{api-id}.execute-api.{region}.amazonaws.com/stage/resource \
