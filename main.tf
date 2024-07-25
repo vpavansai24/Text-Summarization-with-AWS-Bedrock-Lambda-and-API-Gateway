@@ -159,8 +159,3 @@ resource "aws_api_gateway_stage" "example_stage" {
   rest_api_id   = aws_api_gateway_rest_api.example_api.id
   stage_name    = "dev"
 }
-
-# Output the API Endpoint
-output "endpoint_url" {
-  value = "${aws_api_gateway_stage.example_stage.invoke_url}/${var.endpoint_path}"
-}
