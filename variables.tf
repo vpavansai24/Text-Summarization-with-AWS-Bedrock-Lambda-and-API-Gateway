@@ -1,5 +1,5 @@
 variable "myregion" {
-  description = "The AWS Region"
+  description = "The AWS Region to deploy resources in"
   type = string
   default = "us-east-1"
 }
